@@ -1,0 +1,211 @@
+/*Fonte do texto do Google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* EESTILO GERAL (*) para toda a página HTML*/
+*{
+    margin: 0; /*margem*/
+    padding: 0; /*espaçamento*/
+    box-sizing: border-box; /*para que fiquem na mesma borda da caixa*/
+    font-family: "Poppins" , sans-serif;
+    color: rgb(3, 44, 44);
+}
+
+body{ /*estilo para o corpo da página*/
+    background-color: rgb(94, 201, 250);
+    height: 100vh; /*viewport, em relação a altura*/
+    background-image: url(./tech2.png);
+    background-repeat: repeat;
+    background-size: contain;
+  
+}
+
+.interface{
+    max-width: 1280px; /*largura máxima*/
+    margin: auto; /*centralizada na tela*/
+}
+
+
+.header{
+    padding: 40px 4% ;
+}
+.flex{
+    display: flex; /*lado a lado */
+}
+
+
+/*CABEÇALHO*/
+
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(94, 201, 250)
+}
+
+header a{
+    color: rgb(9, 36, 36);
+    text-decoration: none; /*retira o sublilhado*/
+}
+
+header nav ul{
+    list-style-type: none; /*retira as bolinhas da lista*/
+}
+
+header nav ul li{
+    display: inline-block; /*menu na horizontal*/
+    padding: 1rem 5rem; /*cima e baixo, esquerda e direita*/
+    border: 1px solid rgb(20, 20, 20); /*borda da caixa*/
+    min-width: 5rem;
+    align-items: center;
+    justify-content: space-around;
+    transition: .5s ease-in-out;
+
+    
+}
+
+header a{
+    color: rgb(9, 36, 36);
+    text-decoration: none; /*retira o sublilhado*/
+    display: inline-block; 
+    transition: 1.5s;
+}
+
+a:hover{ /*quando passa o mouse em cima*/
+    color: rgb(79, 89, 185);;
+    transform: scale(1.5);
+    background-color: transparent;
+    box-shadow: 0px 0px 9px black;
+}
+
+.botao{ /*da pagina selecionada*/
+     color: rgb(247, 251, 255);
+     font-size: large;
+     background-color: black;
+ }
+
+ /*TEXTO E IMAGEM */
+ section.topo_do_site{
+    padding: 40px 4%;
+ }
+
+section.topo_do_site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /*espaçamento*/
+}
+
+.topo_do_site h1{
+    font-size: 40px;
+}
+.topo_do_site .texto1 h1 span{
+    color: rgb(92, 0, 126);
+    font-size: 70px;  
+}
+
+.topo_do_site .texto2 h1 span{
+    color: rgb(92, 0, 126);
+    font-size: 70px;  
+    
+}
+
+
+.topo_do_site .texto1 p{
+    color: rgb(51, 31, 88);
+    text-align: justify;
+    
+}
+
+.topo_do_site .texto1 ul li{
+    color: rgb(43, 0, 59);
+    text-align: justify;
+    list-style-type: none;
+    
+}
+
+
+.topo_do_site .texto2 ul li{
+    color: rgb(43, 0, 59);
+    text-align: justify;
+    list-style-type: none;
+    background-color: rgba(114, 111, 146, 0.26);
+}
+
+/*Ícones e demais links*/
+.social img{  
+    width: 35px;
+    border-radius: 50%;
+}
+
+.social a{
+    list-style-type: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(0, 51, 190);
+}
+
+.social ul{
+    color: rgb(86, 36, 105);
+}
+
+
+.linguagens img{
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+
+.linguagens{
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+
+/*Animações*/
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+.topo_do_site .Imagem1 img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate; /*tempo de animação, velocidade, infinito*/
+
+}
+
+/*RESPONSIVIDADE para celulares*/
+
+/*Barra do menu*/
+@media screen and (max-width:600px){
+    nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .topo_do_site h1{
+        text-align: center;
+        line-height: 150%;
+
+}
+}
+/*Posição da Imagem*/
+@media screen and (max-width:768px){
+    section{
+        width: 100%;
+        padding: 0;
+    }
+
+    .flex{
+        flex-direction: column-reverse;
+    }
+       
+    }
+    
+ 
+
+   
